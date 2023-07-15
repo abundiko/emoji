@@ -1,5 +1,5 @@
 import { motion, useTransform } from "framer-motion";
-import { motionValue } from "framer-motion/dom";
+import { motionValue} from "framer-motion/dom";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -18,27 +18,27 @@ function App() {
   }, []);
 
   const leftMotionMouseX = useTransform(
-    motionValue(mouseLocation.x),
+    (motionValue(mouseLocation.x) as unknown) as import("c:/Users/User/Documents/GitHub/emoji/node_modules/framer-motion/dist/index").MotionValue<number>,
+    //! should be: motionValue(mouseLocation.x) as MotionValue<number>,
     [0, maxValues.x / 2 - 150],
     [0, 1]
   );
   const rightMotionMouseX = useTransform(
-    motionValue(mouseLocation.x),
+    (motionValue(mouseLocation.x) as unknown) as import("c:/Users/User/Documents/GitHub/emoji/node_modules/framer-motion/dist/index").MotionValue<number>,
+    //! should be: motionValue(mouseLocation.x) as MotionValue<number>,
     [maxValues.x / 2 + 150, maxValues.x],
     [1, 0]
-  );
-  const leftMotionMouseY = useTransform(
-    motionValue(mouseLocation.y),
-    [0, maxValues.y / 2 - 300],
-    [0, 1]
-  );
-  const leftEyeX = useTransform(
-    motionValue(mouseLocation.x),
+    );
+    
+    const leftEyeX = useTransform(
+      (motionValue(mouseLocation.x) as unknown) as import("c:/Users/User/Documents/GitHub/emoji/node_modules/framer-motion/dist/index").MotionValue<number>,
+      //! should be: motionValue(mouseLocation.x) as MotionValue<number>,
     [0, maxValues.x],
     ["-0.8rem", "2rem"]
   );
   const leftEyeY = useTransform(
-    motionValue(mouseLocation.y),
+    (motionValue(mouseLocation.y) as unknown) as import("c:/Users/User/Documents/GitHub/emoji/node_modules/framer-motion/dist/index").MotionValue<number>,
+    //! should be: motionValue(mouseLocation.y) as MotionValue<number>,
     [0, maxValues.y],
     ["-0.8rem", "2rem"]
   );
