@@ -2,9 +2,9 @@
 
 This is a small React + TypeScript project that displays an emoji and reacts to mouse events.
 
-[Visit Live](https://cute-emoji.netlify.app/)
+[![Banner](/public/banner.png)](https://cute-emoji.netlify.app/)
 
-![Banner](/public/banner.png)
+
 
 ## Installation
 
